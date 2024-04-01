@@ -38,6 +38,7 @@ def main():
     with st.sidebar:
         uploaded_files =  st.file_uploader("Upload your file",type=['pdf','docx'],accept_multiple_files=True)
         openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
+        huggingface_api_key = st.text_input("Huggingface API Key", key ="chatbot_api_key", type="password")
         process = st.button("Process")
     if process:
         if not openai_api_key:
